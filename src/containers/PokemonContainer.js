@@ -1,23 +1,19 @@
 import React from "react";
+import { useQuery } from "@apollo/react-hooks";
+import { Pokemon } from "../components/Pokemon";
+import { GET_POKEMONS } from "../graphql/get-pokemons";
 
 export function PokemonContainer() {
-  return (
-    <h1>Hi! I'am a Pokemon Container</h1>
-  )
-}
+  const { data: { pokemons = [] } = {} } = useQuery(GET_POKEMONS, {
+    variables: { first: 9 }
+  });
 
-// {
-//   pokemon(first: 9) {
-//     id
-//     name
-//     attack
-//     created
-//     height
-//     hp
-//     resource_uri
-//     speed
-//     total
-//     weight
-    
-//   }
-// }
+  return (
+    <div className="container">
+      {pokemons &&
+        pokemons.map((pokemon) => (
+          <Pokemon key={pokemon.id} pokemon={pokemon} />
+        ))}
+    </div>
+  );
+}
