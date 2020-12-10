@@ -27,7 +27,7 @@ body {
 /* POKEMON APP */
 .container {
   display: flex;
-  max-width: 550px;
+  max-width: 950px;
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -38,7 +38,7 @@ body {
 }
 
 .container .pokemon {
-  width: 49%;
+  width: 32%;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
