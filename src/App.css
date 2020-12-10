@@ -114,3 +114,28 @@ body {
   text-align: center;
   line-height: 15px;
 }
+
+/* Responsive Styling */
+
+@media (max-width: 800px) {
+  .container .pokemon {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .pokemon__attacks,
+  .container .pokemon__meta {
+    flex-wrap: wrap;
+  }
+
+  .container .pokemon__meta span,
+  .container .pokemon__attacks span,
+  .container .pokemon {
+    width: 100%;
+  }
+
+  .container .pokemon__meta span {
+    margin-bottom: 10px;
+  }
+}
