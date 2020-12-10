@@ -18,3 +18,5 @@ export default function App() {
     </ApolloProvider>
   );
 }
+
+//Deployed with Vercel at : https://csb-sh7h2-priw9mtc4.vercel.app/
