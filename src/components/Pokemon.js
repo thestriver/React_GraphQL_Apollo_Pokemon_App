@@ -2,7 +2,7 @@ import React from "react";
 
 export function Pokemon({ pokemon }) {
   return (
-    <div className="pokemons">
+    <div className="pokemon">
       <div className="pokemon__name">
         <p>{pokemon.name}</p>
       </div>
